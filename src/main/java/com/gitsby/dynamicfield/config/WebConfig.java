@@ -14,14 +14,14 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "com.gitsby.dynamicfield.*")
-public class WebConfig  extends WebMvcConfigurerAdapter {
+public class WebConfig extends WebMvcConfigurerAdapter {
 
-        private static final String APPLICATION_PROPERTIES = "application.properties";
+    private static final String APPLICATION_PROPERTIES = "application.properties";
 
-        @Bean
-        public PropertiesFactoryBean mapper() {
-            PropertiesFactoryBean bean = new PropertiesFactoryBean();
-            bean.setLocation(new ClassPathResource(APPLICATION_PROPERTIES));
-            return bean;
-        }
+    @Bean
+    public PropertiesFactoryBean mapper() {
+        PropertiesFactoryBean bean = new PropertiesFactoryBean();
+        bean.setLocation(new ClassPathResource(APPLICATION_PROPERTIES));
+        return bean;
+    }
 }
