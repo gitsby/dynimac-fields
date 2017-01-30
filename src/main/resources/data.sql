@@ -22,10 +22,10 @@ INSERT INTO attribute (id, type_id, catalogue_type, is_del) VALUES (4, 6, 1, 0);
 -- Data for Name: attributes_trans; Type: TABLE DATA; Schema: ngis; Owner: gauhar
 --
 
-INSERT INTO attributes_trans (id, lang, trans) VALUES (1, 'ru', 'атрибут1');
-INSERT INTO attributes_trans (id, lang, trans) VALUES (2, 'ru', 'атрибут2');
-INSERT INTO attributes_trans (id, lang, trans) VALUES (3, 'ru', 'атрибут3');
-INSERT INTO attributes_trans (id, lang, trans) VALUES (4, 'ru', 'атрибут4');
+INSERT INTO attributes_trans (id, lang, trans) VALUES (1, 'ru', 'attribute_ru_1');
+INSERT INTO attributes_trans (id, lang, trans) VALUES (2, 'ru', 'attribute_ru_2');
+INSERT INTO attributes_trans (id, lang, trans) VALUES (3, 'ru', 'attribute_ru_3');
+INSERT INTO attributes_trans (id, lang, trans) VALUES (4, 'ru', 'attribute_ru_4');
 
 
 --
@@ -45,9 +45,9 @@ INSERT INTO catalogue (id, type_id, is_del) VALUES (3, 1, 0);
 -- Data for Name: catalogue_trans; Type: TABLE DATA; Schema: ngis; Owner: gauhar
 --
 
-INSERT INTO catalogue_trans (id, lang, trans) VALUES (1, 'ru', 'обременение1');
-INSERT INTO catalogue_trans (id, lang, trans) VALUES (3, 'ru', 'обременение3');
-INSERT INTO catalogue_trans (id, lang, trans) VALUES (2, 'ru', 'обременение2');
+INSERT INTO catalogue_trans (id, lang, trans) VALUES (1, 'ru', 'obremenenie1');
+INSERT INTO catalogue_trans (id, lang, trans) VALUES (2, 'ru', 'obremenenie2');
+INSERT INTO catalogue_trans (id, lang, trans) VALUES (3, 'ru', 'obremenenie3');
 
 
 --
@@ -67,9 +67,9 @@ INSERT INTO catalogue_type (id, is_del) VALUES (3, 0);
 -- Data for Name: catalogue_type_trans; Type: TABLE DATA; Schema: ngis; Owner: gauhar
 --
 
-INSERT INTO catalogue_type_trans (id, lang, trans) VALUES (1, 'ru', 'обременение');
-INSERT INTO catalogue_type_trans (id, lang, trans) VALUES (2, 'ru', 'срок аренды');
-INSERT INTO catalogue_type_trans (id, lang, trans) VALUES (3, 'ru', 'ограничение');
+INSERT INTO catalogue_type_trans (id, lang, trans) VALUES (1, 'ru', 'obremenenie');
+INSERT INTO catalogue_type_trans (id, lang, trans) VALUES (2, 'ru', 'srok arendy');
+INSERT INTO catalogue_type_trans (id, lang, trans) VALUES (3, 'ru', 'ogranichenie');
 
 
 --
@@ -101,9 +101,9 @@ INSERT INTO class_attribute (class_id, attribute_id) VALUES (4, 3);
 -- Data for Name: class_trans; Type: TABLE DATA; Schema: ngis; Owner: gauhar
 --
 
-INSERT INTO class_trans (id, lang, trans) VALUES (1, 'ru', 'услуга1');
-INSERT INTO class_trans (id, lang, trans) VALUES (2, 'ru', 'услуга2');
-INSERT INTO class_trans (id, lang, trans) VALUES (3, 'ru', 'услуга3');
+INSERT INTO class_trans (id, lang, trans) VALUES (1, 'ru', 'usluga1');
+INSERT INTO class_trans (id, lang, trans) VALUES (2, 'ru', 'usluga2');
+INSERT INTO class_trans (id, lang, trans) VALUES (3, 'ru', 'usluga3');
 
 
 --
@@ -132,8 +132,8 @@ INSERT INTO data_int (application_id, attribute_id, class_id, value) VALUES (3, 
 -- Data for Name: lang; Type: TABLE DATA; Schema: ngis; Owner: gauhar
 --
 
-INSERT INTO lang (lang, note) VALUES ('kk', 'Казахский');
-INSERT INTO lang (lang, note) VALUES ('ru', 'Русский');
+INSERT INTO lang (lang, note) VALUES ('kk', 'Kazahskiy');
+INSERT INTO lang (lang, note) VALUES ('ru', 'Russian');
 INSERT INTO lang (lang, note) VALUES ('en', 'English');
 
 
