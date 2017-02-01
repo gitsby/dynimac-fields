@@ -10,6 +10,7 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.util.List;
@@ -23,6 +24,8 @@ import java.util.List;
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     private static final String APPLICATION_PROPERTIES = "application.properties";
+    private static final String RESOURCES_MAPPING = "/resources/**";
+    private static final String RESOURCES = "/resources/";
 
     private MappingJackson2HttpMessageConverter jacksonMessageConverter() {
         Jackson2ObjectMapperBuilder builder = new Jackson2ObjectMapperBuilder()
@@ -44,5 +47,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         PropertiesFactoryBean bean = new PropertiesFactoryBean();
         bean.setLocation(new ClassPathResource(APPLICATION_PROPERTIES));
         return bean;
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler(RESOURCES_MAPPING).addResourceLocations(RESOURCES);
     }
 }
